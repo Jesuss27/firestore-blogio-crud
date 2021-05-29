@@ -65,20 +65,31 @@ h3{
     cursor:pointer;
 }
 .delete-btn{
-    background:white;
+    background:rgb(255, 98, 98);
     display:flex;
     justify-content: center;
     align-items: center;
     width:50%;
+    transition: all 0.2s ease;
 }
 
 .edit-btn{
-    background:white;
+    background:rgb(210, 255, 210);
     width:50%;
     display:flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.2s ease;
 
+}
+
+.delete-btn:hover{
+    background:rgb(255, 61, 61);
+
+}
+
+.edit-btn:hover{
+    background:rgb(159, 221, 159);
 }
 
 
