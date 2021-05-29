@@ -1,23 +1,19 @@
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Title</th>
-        <th scope="col">Date</th>
-        <th scope="col">Notes</th>
-        <th scope="col">Action </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let post of Posts; let i = index">
-        <th scope="row">{{ i + 1 }}</th>
-        <td>{{ post.title }}</td>
-        <td>{{ post.date }}</td>
-        <td>{{ post.notes }}</td>
-        <td>
-          <span (click)="removePost(post)" class="text-danger">Delete</span> &nbsp;
-          <span routerLink="/update-post/{{post.id}}" class="text-primary">Edit</span>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="posts-container" >
+    <div class="post" *ngFor="let post of Posts; let i = index">
+        <div class="post-nav">
+            <h3>{{post.title}}</h3>
+        </div>
+        <div class="post-date">
+            <p>{{post.date}}</p>
+        </div>
+        <div class="post-body">
+            <p class="body-text">{{post.notes}}</p>
+        </div>
+
+    <div class="buttons">
+        <div class="delete-btn" (click)="removePost(post)">DELETE</div>
+        <div class="edit-btn" routerLink="/update-post/{{post.id}}">EDIT</div>
+    </div>
+    </div>
+
+</div>

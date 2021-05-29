@@ -1,5 +1,5 @@
 
-
+<div class=container m-5>
 <form [formGroup]="postForm" (ngSubmit)="onSubmit()" novalidate>
     <div class="mb-3">
       <label>Title:</label>
@@ -12,11 +12,12 @@
     </div>
   
     <div class="mb-3">
-      <label>Notes:</label>
-      <input type="text" formControlName="notes" style="height:50vh" class="form-control" required>
-    </div>
+        <label>Notes</label>
+        <textarea rows="10" formControlName="notes" class="form-control" required></textarea>
+      </div>
   
     <div class="mb-3">
       <button type="submit" class="btn btn-primary" [disabled]="!postForm.valid">Create</button>
     </div>
   </form>
+</div>
