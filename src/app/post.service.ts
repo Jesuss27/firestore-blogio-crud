@@ -43,7 +43,7 @@ export class PostService {
   updatePost(post: Post, id ) {
     return this.angularFirestore
     .collection("post-collection")
-    .doc(post.id)
+    .doc(id)
     .update({
       title: post.title,
       date: post.date,
