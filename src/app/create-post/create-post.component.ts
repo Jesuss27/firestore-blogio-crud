@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from "../post.service";
 import { FormBuilder, FormGroup } from "@angular/forms";
-import { Router } from "@angular/router" ;
+import { Router, ActivatedRoute } from "@angular/router" ;
  
 @Component({
   selector: 'app-create-post',
@@ -14,7 +14,9 @@ export class CreatePostComponent implements OnInit {
   constructor(
     public postService:PostService ,
     public formBuilder:FormBuilder ,
-    public router: Router ,
+    private router: Router ,
+    private act: ActivatedRoute ,
+
   ) { 
     this.postForm = this.formBuilder.group({
       title: [""],
